@@ -28,7 +28,7 @@ class Webpacker::Compiler
         record_compilation_digest
       end
     else
-      logger.debug "Everything's up-to-date. Nothing to do"
+      logger.debug "Everything's up-to-date. Nothing to do. Run clobber first if you'd like to re-compile."
       true
     end
   end
