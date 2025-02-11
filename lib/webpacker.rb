@@ -38,6 +38,7 @@ module Webpacker
   delegate :config, :compiler, :manifest, :commands, :dev_server, to: :instance
 
   delegate :bootstrap, :clean, :clobber, :compile, to: :commands
+  # delegate_to :commands, :bootstrap, :clean, :clobber, :compile
 end
 
 require "webpacker/instance"
