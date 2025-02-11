@@ -31,7 +31,7 @@ module Webpacker
   end
 
   def delegate_to(object, definitions)
-    delegate object, to: definitions
+    delegate definitions, to: object
   end
 
   delegate :logger, :logger=, :env, :inlining_css?, to: :instance
