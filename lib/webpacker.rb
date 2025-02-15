@@ -30,15 +30,14 @@ module Webpacker
     Webpacker.logger = old_logger
   end
 
-  def delegate_to(object, definitions)
-    delegate definitions, to: object
-  end
+  # def delegate_to(object, definitions)
+  #   delegate definitions, to: object
+  # end
 
   delegate :logger, :logger=, :env, :inlining_css?, to: :instance
   delegate :config, :compiler, :manifest, :commands, :dev_server, to: :instance
 
   delegate :bootstrap, :clean, :clobber, :compile, to: :commands
-  # delegate_to :commands, :bootstrap, :clean, :clobber, :compile
 end
 
 require "webpacker/instance"
